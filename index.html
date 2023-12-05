@@ -72,7 +72,7 @@
       <section class="restaurants">
         <h2>Restaurants</h2>
         <div class="restaurants-cards">
-          <a class="card-link" href="restaurants/la_palette_du_gout.html">
+          <a class="card-link" href="restaurants/lapalettedugout.html">
             <article class="card">
               <div class="card-new">
                 <img class="size-img"
@@ -89,12 +89,16 @@
                   <span>Ménilmontant</span>
                 </div>
                 <div class="card-rating">
-                  <i class="fa-regular fa-heart fa-2xl"></i>   
+                  <input type="checkbox" id="heartCheckbox1" class="hidden">
+                  <label for="heartCheckbox1" class="heart-label">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                  </label>
                 </div>
               </div>
             </article>
           </a>
-          <a class="card-link" href="restaurants/la_note_enchantee.html">
+          <a class="card-link" href="restaurants/lanoteenchantee.html">
             <article class="card">
               <div class="card-new">
                 <img class="size-img"
@@ -111,12 +115,16 @@
                   <span>Charonne</span>
                 </div>
                 <div class="card-rating">
-                  <i class="fa-regular fa-heart fa-2xl"></i>                 
+                  <input type="checkbox" id="heartCheckbox2" class="hidden">
+                  <label for="heartCheckbox2" class="heart-label">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                  </label>                
                 </div>
               </div>
             </article>
           </a>
-          <a class="card-link" href="restaurants/a_la_francaise.html">
+          <a class="card-link" href="restaurants/alafrancaise.html">
             <article class="card">
               <div class="card-new">
                 <img class="size-img"
@@ -130,12 +138,16 @@
                   <span>Cité Rouge</span>
                 </div>
                 <div class="card-rating">
-                  <i class="fa-regular fa-heart fa-2xl"></i>  
+                  <input type="checkbox" id="heartCheckbox3" class="hidden">
+                  <label for="heartCheckbox3" class="heart-label">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                  </label> 
                 </div>
               </div>
             </article>
           </a>
-          <a class="card-link" href="restaurants/le_delice_des_sens.html">
+          <a class="card-link" href="restaurants/ledelicedessens.html">
             <article class="card">
               <div class="card-new">
                 <img class="size-img"
@@ -149,7 +161,11 @@
                   <span>Folie-Méricourt</span>
                 </div>
                 <div class="card-rating">
-                  <i class="fa-regular fa-heart fa-2xl"></i>  
+                  <input type="checkbox" id="heartCheckbox4" class="hidden">
+                  <label for="heartCheckbox4" class="heart-label">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                  </label> 
                 </div>
               </div>
             </article>
@@ -158,10 +174,10 @@
       </section>
     </main>
     <footer>
-      <div>
-        <img class="footer-logo" src="assets/images/logo/ohmyfood@2x.svg" alt="logo de Ohmyfood" />
-      </div>
       <ul class="footer-list">
+        <li class="footer-style">         
+          <h3 class="footer-logo">OhMyFood</h3>
+        </li>
         <li class="footer-style">
           <i class="fa-solid fa-utensils"></i>
           <span class="footers-texte">Proposer un restaurant</span>
@@ -177,7 +193,6 @@
           <a  class="footers-texte" href="mailto:adresse@maildeohmufood.fr">Contact</a>
         </li>
       </ul>
-    </footer>
-  
+    </footer> 
   </body>
 </html>
