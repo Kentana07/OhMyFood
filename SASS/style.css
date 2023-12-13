@@ -147,21 +147,28 @@ header .search .localisaton {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.2s;
+  transition: opacity 1s, box-shadow 1s;
 }
 .display .explore:hover {
   opacity: 0.8;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 
 /*section fonctionnement*/
 .section-fonction {
-  margin: 50px 18px 50px 25px;
+  margin: 50px 18px 50px 18px;
+}
+.section-fonction .title-fonction {
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
 }
 .section-fonction .fonction {
   margin-top: 30px;
-  padding-left: 20px;
+  padding-left: 0px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   gap: 15px;
   list-style-type: none;
 }
@@ -199,6 +206,10 @@ header .search .localisaton {
 .restaurants {
   padding: 50px 10px 60px 10px;
   background: var(--Background, #f6f6f6);
+  position: relative;
+}
+.restaurants .title-main {
+  margin: auto;
 }
 .restaurants .restaurants-cards {
   padding-top: 20px;
@@ -234,6 +245,14 @@ header .search .localisaton {
 }
 .restaurants .restaurants-cards .card .card-text {
   margin-left: 15px;
+}
+.restaurants .restaurants-cards .card .card-text .restaurant-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+.restaurants .restaurants-cards .card .card-text .restaurant-loc {
+  font-size: 17px;
+  font-weight: 300;
 }
 .restaurants .restaurants-cards .card .card-new {
   width: 100%;
@@ -272,25 +291,25 @@ header .search .localisaton {
 }
 .restaurants .restaurants-cards .card .heart-label i {
   position: absolute;
-  bottom: -30px;
+  bottom: -10px;
   right: 5px;
   transition: opacity 0.3s, color 0.3s;
 }
-.restaurants .restaurants-cards .card .heart-label .fas {
+.restaurants .restaurants-cards .card .heart-label .fa-solid {
   opacity: 0;
 }
-.restaurants .restaurants-cards .card #heartCheckbox1:checked + .heart-label .far,
-.restaurants .restaurants-cards .card #heartCheckbox2:checked + .heart-label .far,
-.restaurants .restaurants-cards .card #heartCheckbox3:checked + .heart-label .far,
-.restaurants .restaurants-cards .card #heartCheckbox4:checked + .heart-label .far {
+.restaurants .restaurants-cards .card #heartCheckbox1:checked + .heart-label .fa-regular,
+.restaurants .restaurants-cards .card #heartCheckbox2:checked + .heart-label .fa-regular,
+.restaurants .restaurants-cards .card #heartCheckbox3:checked + .heart-label .fa-regular,
+.restaurants .restaurants-cards .card #heartCheckbox4:checked + .heart-label .fa-regular {
   opacity: 0;
 }
-.restaurants .restaurants-cards .card #heartCheckbox1:checked + .heart-label .fas,
-.restaurants .restaurants-cards .card #heartCheckbox2:checked + .heart-label .fas,
-.restaurants .restaurants-cards .card #heartCheckbox3:checked + .heart-label .fas,
-.restaurants .restaurants-cards .card #heartCheckbox4:checked + .heart-label .fas {
+.restaurants .restaurants-cards .card #heartCheckbox1:checked + .heart-label .fa-solid,
+.restaurants .restaurants-cards .card #heartCheckbox2:checked + .heart-label .fa-solid,
+.restaurants .restaurants-cards .card #heartCheckbox3:checked + .heart-label .fa-solid,
+.restaurants .restaurants-cards .card #heartCheckbox4:checked + .heart-label .fa-solid {
   opacity: 1;
-  color: #9256dc;
+  color: linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
 }
 
 /*footer*/
@@ -304,7 +323,7 @@ footer {
 footer .footer-logo {
   color: var(--White, #fff);
   font-family: Shrikhand;
-  font-size: 25px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -324,7 +343,8 @@ footer .footer-style .fa-handshake-angle {
 footer .footers-texte {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 /*  pages secondaires*/
@@ -389,17 +409,17 @@ footer .footers-texte {
 }
 .in-front .dish .main-title .heart-label i {
   position: absolute;
-  top: -10px;
-  left: -70px;
+  top: 10px;
+  left: -30px;
   transition: opacity 0.3s, color 0.3s;
 }
-.in-front .dish .main-title .heart-label .fas {
+.in-front .dish .main-title .heart-label .fa-solid {
   opacity: 0;
 }
-.in-front .dish .main-title #heartCheckbox3:checked + .heart-label .far {
+.in-front .dish .main-title #heartCheckbox3:checked + .heart-label .fa-regular {
   opacity: 0;
 }
-.in-front .dish .main-title #heartCheckbox3:checked + .heart-label .fas {
+.in-front .dish .main-title #heartCheckbox3:checked + .heart-label .fa-solid {
   opacity: 1;
   color: #9256dc;
 }
@@ -474,24 +494,51 @@ footer .footers-texte {
   margin-bottom: 10px;
   width: 100%;
 }
+.in-front .dish .card-dish .card-text-dish .price {
+  color: #353535;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+.in-front .dish .card-dish .card-text-dish .title-serving {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 500;
+}
+.in-front .dish .card-dish .card-text-dish .info-serving {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 300;
+}
 .in-front .dish .fa-circle-check {
   color: white;
 }
 .in-front .dish .card-dish .drawer {
   position: absolute;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   top: 0;
-  right: -100%;
-  width: 52.5%;
+  right: -59px;
+  width: 59px;
   height: 100%;
-  padding-left: 10px;
-  background: #99E2D0;
+  background: #99e2d0;
   transition: transform 0.5s ease;
+}
+.in-front .dish .card-dish .price {
+  transition: transform 0.4s ease-in-out;
 }
 .in-front .dish .card-dish:hover .drawer {
   transform: translateX(-100%);
+}
+.in-front .dish .card-dish:hover .price {
+  transform: translateX(-59px);
 }
 .in-front .dish .animation1 {
   opacity: 0;
@@ -597,10 +644,8 @@ footer .footers-texte {
   }
 }
 @media (min-width: 1024px) {
-  .section-fonction {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  .section-fonction .fonction {
+    flex-direction: row;
   }
   .section-fonction .all-btn {
     display: flex;
@@ -613,9 +658,6 @@ footer .footers-texte {
   }
   .restaurants .restaurants-cards {
     gap: 50px;
-  }
-  .restaurants .restaurants-cards .card-link {
-    width: 490px;
   }
   .restaurants .restaurants-cards .card {
     width: 490px;

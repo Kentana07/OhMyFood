@@ -139,21 +139,29 @@ header {
     align-items: center;
     justify-content: center;
 
-    transition: opacity 0.2s;
+    transition: opacity 1s, box-shadow 1s;
 
     &:hover {
       opacity: 0.8;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
     }
   }
 }
 /*section fonctionnement*/
 .section-fonction {
-  margin: 50px 18px 50px 25px;
+  margin: 50px 18px 50px 18px;
+
+  .title-fonction {
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+  }
   .fonction {
     margin-top: 30px;
-    padding-left: 20px;
+    padding-left: 0px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 15px;
     .num {
       display: flex;
@@ -191,7 +199,10 @@ header {
 .restaurants {
   padding: 50px 10px 60px 10px;
   background: var(--Background, #f6f6f6);
-
+  position: relative;
+  .title-main {
+    margin: auto;
+  }
   .restaurants-cards {
     padding-top: 20px;
     display: flex;
@@ -223,19 +234,15 @@ header {
       }
       .card-text {
         margin-left: 15px;
-        .restaurant-name{
+        .restaurant-name {
+          font-size: 18px;
 
-
-
-font-size: 18px;
-
-font-weight: 700;
-
+          font-weight: 700;
         }
-        .restaurant-loc{
+        .restaurant-loc {
           font-size: 17px;
 
-font-weight: 300;
+          font-weight: 300;
         }
       }
       .card-new {
@@ -276,28 +283,28 @@ font-weight: 300;
 
       .heart-label i {
         position: absolute;
-        bottom: -30px;
+        bottom: -10px;
         right: 5px;
         transition: opacity 0.3s, color 0.3s;
       }
 
-      .heart-label .fas {
+      .heart-label .fa-solid {
         opacity: 0;
       }
 
-      #heartCheckbox1:checked + .heart-label .far,
-      #heartCheckbox2:checked + .heart-label .far,
-      #heartCheckbox3:checked + .heart-label .far,
-      #heartCheckbox4:checked + .heart-label .far {
+      #heartCheckbox1:checked + .heart-label .fa-regular,
+      #heartCheckbox2:checked + .heart-label .fa-regular,
+      #heartCheckbox3:checked + .heart-label .fa-regular,
+      #heartCheckbox4:checked + .heart-label .fa-regular {
         opacity: 0;
       }
 
-      #heartCheckbox1:checked + .heart-label .fas,
-      #heartCheckbox2:checked + .heart-label .fas,
-      #heartCheckbox3:checked + .heart-label .fas,
-      #heartCheckbox4:checked + .heart-label .fas {
+      #heartCheckbox1:checked + .heart-label .fa-solid,
+      #heartCheckbox2:checked + .heart-label .fa-solid,
+      #heartCheckbox3:checked + .heart-label .fa-solid,
+      #heartCheckbox4:checked + .heart-label .fa-solid {
         opacity: 1;
-        color: #9256dc;
+        color: linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
       }
     }
   }
@@ -312,7 +319,7 @@ footer {
   .footer-logo {
     color: var(--White, #fff);
     font-family: Shrikhand;
-    font-size: 25px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -332,7 +339,8 @@ footer {
   .footers-texte {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
   }
 }
 /*  pages secondaires*/
@@ -381,7 +389,7 @@ footer {
       gap: 30px;
       .heart-label {
         font-size: 3em;
-        
+
         position: relative;
         margin: 10px;
       }
@@ -390,17 +398,17 @@ footer {
       }
       .heart-label i {
         position: absolute;
-        top: -10px;
-        left: -70px;
+        top: 10px;
+        left: -30px;
         transition: opacity 0.3s, color 0.3s;
       }
-      .heart-label .fas {
+      .heart-label .fa-solid {
         opacity: 0;
       }
-      #heartCheckbox3:checked + .heart-label .far {
+      #heartCheckbox3:checked + .heart-label .fa-regular {
         opacity: 0;
       }
-      #heartCheckbox3:checked + .heart-label .fas {
+      #heartCheckbox3:checked + .heart-label .fa-solid {
         opacity: 1;
         color: #9256dc;
       }
@@ -474,70 +482,106 @@ footer {
         margin-left: 15px;
         margin-bottom: 10px;
         width: 100%;
-      }   
+        .price {
+          color: #353535;
+          text-align: center;
+          font-size: 15px;
+          font-weight: 700;
+        }
+        .title-serving {
+          overflow: hidden;
+          color: #000;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 18px;
+          font-weight: 500;
+        }
+        .info-serving {
+          overflow: hidden;
+          color: #000;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 15px;
+          font-weight: 300;
+        }
+      }
     }
-    .fa-circle-check{
+    .fa-circle-check {
       color: white;
     }
     .card-dish .drawer {
-        position: absolute;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        top: 0;
-        right: -100%; 
-        width: 52.5%; 
-        height: 100%;
-        padding-left: 10px;
-        background: #99E2D0; 
-        transition: transform 0.5s ease; 
-      }
-      .card-dish:hover .drawer {
-        transform: translateX(-100%);
-        
-      }
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      right: -59px;
+      width: 59px;
+      height: 100%;
+
+      background: #99e2d0;
+      transition: transform 0.5s ease;
+    }
+
+    .card-dish .price {
+      transition: transform 0.4s ease-in-out;
+    }
+    .card-dish:hover .drawer {
+      transform: translateX(-100%);
+    }
+    .card-dish:hover .price {
+      transform: translateX(-59px);
+    }
     .animation1 {
       opacity: 0;
       animation: fadeIn 1s forwards;
-    } .animation2 {
+    }
+    .animation2 {
       opacity: 0;
       animation: fadeIn 2s forwards;
-    }.animation3 {
+    }
+    .animation3 {
       opacity: 0;
       animation: fadeIn 3s forwards;
-    }.animation4 {
+    }
+    .animation4 {
       opacity: 0;
       animation: fadeIn 4s forwards;
-    }.animation5 {
+    }
+    .animation5 {
       opacity: 0;
       animation: fadeIn 5s forwards;
-    }.animation6 {
+    }
+    .animation6 {
       opacity: 0;
       animation: fadeIn 6s forwards;
-    }.animation7 {
+    }
+    .animation7 {
       opacity: 0;
       animation: fadeIn 7s forwards;
-    }.animation8 {
+    }
+    .animation8 {
       opacity: 0;
       animation: fadeIn 8s forwards;
-    }.animation9 {
+    }
+    .animation9 {
       opacity: 0;
       animation: fadeIn 9s forwards;
-    }.animation10 {
+    }
+    .animation10 {
       opacity: 0;
       animation: fadeIn 3.5s forwards;
     }
-    
-    
   }
-}@keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 @keyframes appear {
   to {
-    opacity: 1; 
+    opacity: 1;
   }
 }
 .pricing {
@@ -565,7 +609,7 @@ footer {
     opacity: 0.8;
   }
 }
-.sizing-of-lanote{
+.sizing-of-lanote {
   padding-bottom: 260px;
 }
 
@@ -598,9 +642,9 @@ footer {
 
 @media (min-width: 1024px) {
   .section-fonction {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    .fonction {
+      flex-direction: row;
+    }
     .all-btn {
       display: flex;
       width: 100%;
@@ -611,9 +655,6 @@ footer {
     display: flex;
     flex-direction: column;
     .restaurants-cards {
-      .card-link {
-        width: 490px;
-      }
       gap: 50px;
       .card {
         width: 490px;
@@ -622,6 +663,7 @@ footer {
   }
   .in-front {
     width: 1024px;
-      left: 50%;  transform: translate( -50%);
+    left: 50%;
+    transform: translate(-50%);
   }
 }
