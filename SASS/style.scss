@@ -52,7 +52,7 @@ i {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  animation: hiding 5s;
+  animation: hiding 5s; //animation pour cacher le flou
   animation-fill-mode: forwards;
   pointer-events: none;
 }
@@ -74,7 +74,7 @@ i {
   border: 4px solid #ccc;
   border-top: 10px solid #9356dc;
   border-radius: 50%;
-  animation: spin 2s, hidespinner 4s forwards;
+  animation: spin 2s, hidespinner 4s forwards; // spinner + loader + flou
 }
 @keyframes spin {
   0% {
@@ -143,7 +143,7 @@ header {
     align-items: center;
     justify-content: center;
 
-    transition: opacity 1s, box-shadow 1s;
+    transition: opacity 1s, box-shadow 1s; //animation button
 
     &:hover {
       opacity: 0.8;
@@ -295,7 +295,7 @@ header {
         position: absolute;
         bottom: -30px;
         right: 5px;
-        transition: opacity 0.3s, color 0.3s;
+        transition: opacity 0.3s, color 0.3s; // animation coeur
       }     
       .heart-label .fa-solid {
         opacity: 0;
@@ -534,11 +534,11 @@ footer {
       height: 100%;
 
       background: #99e2d0;
-      transition: transform 0.5s ease;
+      transition: transform 0.5s ease; //animation des tirroirs de validation
     }
 
     .card-dish .price {
-      transition: transform 0.4s ease-in-out;
+      transition: transform 0.4s ease-in-out; 
     }
     .card-dish:hover .drawer {
       transform: translateX(-100%);
@@ -548,7 +548,7 @@ footer {
     }
     .animation1 {
       opacity: 0;
-      animation: fadeIn 1s forwards;
+      animation: fadeIn 1s forwards; //animation de l'apparition de l'arriver des plats 
     }
     .animation2 {
       opacity: 0;
@@ -584,7 +584,7 @@ footer {
     }
     .animation10 {
       opacity: 0;
-      animation: fadeIn 3.5s forwards;
+      animation: fadeIn 3.5s forwards; //lanoteenchanter
     }
   }
 }
