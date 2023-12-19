@@ -329,8 +329,8 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   .footer-logo {
-    color: var(--White, #fff);
-    font-family: Shrikhand;
+    color: var(--White, #fff); 
+    font-family: Shrikhand; // ceci est une police differente de la normal
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
