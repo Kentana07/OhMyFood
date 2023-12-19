@@ -6,6 +6,9 @@
 body {
   margin: 0px;
 }
+.fa-2xs{
+  line-height:1em;
+}
 h2 {
   margin: 0px;
 }
@@ -37,6 +40,7 @@ button {
 i {
   color: var(--grey-tint-4, #7e7e7e);
 }
+
 /*animation*/
 .overlay {
   position: fixed;
@@ -271,23 +275,28 @@ header {
       .card-rating {
         display: flex;
         align-items: center;
+        height: 30px;
+        width: 30px;
+        
       }
+      .heart-label{
+          margin: 0px;
+          
+          font-size: 3em;
+        position: relative;
+        margin: 10px;
+        }
       .hidden {
         display: none;
       }
-      .heart-label {
-        font-size: 3em;
-        position: relative;
-        margin: 10px;
-      }
-
       .heart-label i {
+        height: 30px;
+          width: 30px;
         position: absolute;
-        bottom: -10px;
+        bottom: -30px;
         right: 5px;
         transition: opacity 0.3s, color 0.3s;
-      }
-
+      }     
       .heart-label .fa-solid {
         opacity: 0;
       }
@@ -304,7 +313,10 @@ header {
       #heartCheckbox3:checked + .heart-label .fa-solid,
       #heartCheckbox4:checked + .heart-label .fa-solid {
         opacity: 1;
-        color: linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+        background: linear-gradient(201deg, #9356dc, #ff79da);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
     }
   }
@@ -389,7 +401,6 @@ footer {
       gap: 30px;
       .heart-label {
         font-size: 3em;
-
         position: relative;
         margin: 10px;
       }
@@ -398,7 +409,7 @@ footer {
       }
       .heart-label i {
         position: absolute;
-        top: 10px;
+        top: -5px;
         left: -30px;
         transition: opacity 0.3s, color 0.3s;
       }
@@ -410,7 +421,10 @@ footer {
       }
       #heartCheckbox3:checked + .heart-label .fa-solid {
         opacity: 1;
-        color: #9256dc;
+        background: linear-gradient(201deg, #9356dc, #ff79da);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
     }
     .list-dish {
