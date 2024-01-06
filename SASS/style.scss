@@ -280,9 +280,8 @@ header {
         
       }
       .heart-label{
-          margin: 0px;
-          
-          font-size: 3em;
+        margin: 0px;
+        font-size: 3em;
         position: relative;
         margin: 10px;
         }
@@ -496,11 +495,14 @@ footer {
         margin-left: 15px;
         margin-bottom: 10px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
         .price {
           color: #353535;
           text-align: center;
           font-size: 15px;
           font-weight: 700;
+          height: 100%;
         }
         .title-serving {
           overflow: hidden;
@@ -532,11 +534,9 @@ footer {
       right: -59px;
       width: 59px;
       height: 100%;
-
       background: #99e2d0;
-      transition: transform 0.5s ease; //animation des tirroirs de validation
+      transition: transform 0.5s ease ; //animation des tirroirs de validation
     }
-
     .card-dish .price {
       transition: transform 0.4s ease-in-out; 
     }
@@ -545,6 +545,11 @@ footer {
     }
     .card-dish:hover .price {
       transform: translateX(-59px);
+      padding-left: 59px;
+      
+    }
+    .card-dish:hover .title-serving {
+      padding-right: 59px;
     }
     .animation1 {
       opacity: 0;

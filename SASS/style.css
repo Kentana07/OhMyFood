@@ -508,12 +508,15 @@ footer .footers-texte {
   margin-left: 15px;
   margin-bottom: 10px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .in-front .dish .card-dish .card-text-dish .price {
   color: #353535;
   text-align: center;
   font-size: 15px;
   font-weight: 700;
+  height: 100%;
 }
 .in-front .dish .card-dish .card-text-dish .title-serving {
   overflow: hidden;
@@ -554,6 +557,10 @@ footer .footers-texte {
 }
 .in-front .dish .card-dish:hover .price {
   transform: translateX(-59px);
+  padding-left: 59px;
+}
+.in-front .dish .card-dish:hover .title-serving {
+  padding-right: 59px;
 }
 .in-front .dish .animation1 {
   opacity: 0;
